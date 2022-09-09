@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+$font: 'Poppins', sans-serif;
+*{
+   
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: $font;
+}
+body{
+    background-color: #181A1F;
+}

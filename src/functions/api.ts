@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getAllPosts = async () =>
-  await axios.get(`http://localhost:3000/post`, {});
+  await axios.get(`https://media-post-back.herokuapp.com/post`, {});
 
 export const createPost = async (
   like: number,
@@ -10,7 +10,7 @@ export const createPost = async (
   media_url: string,
   media_type: string
 ) =>
-  await axios.post(`http://localhost:3000/post`, {
+  await axios.post(`https://media-post-back.herokuapp.com/post`, {
     like,
     desc,
     comments,
@@ -19,7 +19,10 @@ export const createPost = async (
   });
 
 export const deletePost = async (id: number) =>
-  await axios.delete(`http://localhost:3000/post/${id}`, {});
+  await axios.delete(`https://media-post-back.herokuapp.com/post/${id}`, {});
 
 export const likePost = async (id: number) =>
-  await axios.patch(`http://localhost:3000/post/like/${id}`, {});
+  await axios.patch(
+    `https://media-post-back.herokuapp.com/post/like/${id}`,
+    {}
+  );
